@@ -1,0 +1,58 @@
+.header {
+    background-color: transparent;
+    text-align: center;
+    padding: 10px;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    left: 0px;
+}
+
+/* Links inside the navbar */
+.navbar a {
+    float: left;
+    display: block;
+    color: #00d4f9;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar a.active {
+    background-color: #ff0000;
+    color: white;
+}
+
+
+/* Change background on mouse-over */
+.navbar a:hover {
+    -webkit-transition: background-color #d56dff;
+    transition: background-color .8s;
+    background-color: #d56dff;
+    color: black;
+}
+
+/* Main content */
+.main_topic {
+    margin-top: 50px; /* Add a top margin to avoid content overlay */
+}
+
+/*footer*/
+.footer {
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    
+   position: absolute;
+    left: 0px;
+    bottom: 0px;
+}
+.footer_stu_name{
+    color: white;
+}

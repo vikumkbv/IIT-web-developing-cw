@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<script src="functions.js"></script>
+
+<div class="container">
+  <form id="contact" action="" method="post">
+    <h3>Give Us comment !!! </h3>
+    <h5>We are extremely waiting for it ...</h5>
+
+      <input id="name" placeholder="Your name" type="text" tabindex="1" required autofocus>
+
+      <input placeholder="Your Email Address" type="email" id="email" tabindex="2" >
+
+      <input placeholder="Your Phone Number" type="tel" tabindex="3" >
+
+      <input placeholder="Your Web Site starts with http://" type="url" tabindex="4" >
+
+      <textarea id="comment" placeholder="Type your Message Here...." tabindex="5" ></textarea>
+
+    <h4>Rate Us</h4>
+    	<div class="stars">
+  
+    <input class="star star-5" id="star-5" type="radio" name="star" value="5 Star"/>
+    <label class="star star-5" for="star-5"></label>
+    <input class="star star-4" id="star-4" type="radio" name="star" value="4 Star"/>
+    <label class="star star-4" for="star-4"></label>
+    <input class="star star-3" id="star-3" type="radio" name="star" value="3 Star"/>
+    <label class="star star-3" for="star-3"></label>
+    <input class="star star-2" id="star-2" type="radio" name="star" value="2 Star"/>
+    <label class="star star-2" for="star-2"></label>
+    <input class="star star-1" id="star-1" type="radio" name="star" value="1 Star"/>
+    <label class="star star-1" for="star-1"></label>
+  
+</div>
+
+      <button onClick="return submit_button()" name="submit" type="button" id="contact-submit" >Submit</button>
+
+  </form>
+ 
+  
+</div>
+<div id="recentComments" class="recent">
+	<h1 align="center">Recent Comments</h1>
+	
+	</div>
+	
+	
+	<div id="myModal" class="popupmsg">
+	<div class="popupmsg-content">
+	<span onClick="closedialog()" class="close">&times;</span>
+   `<h2 id="popupheading"> </h2>
+    <p id="enteredData"></p>
+  	</div>
+	</div>
+	
+	</body>
+	</html>

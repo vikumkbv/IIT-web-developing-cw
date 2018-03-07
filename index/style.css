@@ -1,0 +1,98 @@
+html{
+  background-color: black; 
+  color: white;
+}
+
+body{
+    font-family: sans-serif;
+  margin: 0;
+}
+        .slider{
+          padding-top: 65px;
+          padding-bottom: 5px;
+          background-color:#7a0076;
+        }
+        .imgSliderContainer{
+          margin-left: auto;
+          margin-right: auto;
+          background: black;
+        }
+        .imgsliderImages {
+            animation: fading 10s infinite;
+            height: 400px;
+            filter: drop-shadow(5px 5px 15px #00e513);
+        }
+
+        @keyframes fading {
+            0% {
+                opacity: 0
+            }
+            50% {
+                opacity: 1
+            }
+            100% {
+                opacity: 0
+            }
+        }
+
+
+      .navBar{
+  width: 100%;
+  background: #142b47;
+  overflow: auto;
+  position: fixed;  
+  z-index: 9;
+}
+.navBar ul{
+  float: right;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  line-height: 60px;
+}
+.navBar li{
+  float: left;
+  border-left: 1px solid #025e59;
+}
+.navBar ul li a{
+  text-decoration: none;
+  width: 130px;
+  display: block;
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  font-family: sans-serif;
+  letter-spacing: 0.5px;
+}
+.navBar li a:hover{
+  -webkit-transition: background-color #d56dff;
+    transition: background-color .8s;
+  color: #e500dd;
+  font-size: 19px;
+  background-color: #5e2e04;
+}
+.navBar ul li a.active {
+    background-color: #60079b;
+    color: white;
+  }
+  
+.logo{
+  margin-top: 5px;
+  float: left;
+  
+  margin-left: 30px;
+  height: 50px;
+}
+.footer {
+    width: 100%;
+    background: #142b47;
+    text-align: center;    
+    padding-bottom: 5px;
+    padding-top: 9px;
+}
+.footer a{
+  text-decoration: none;
+    font-family: sans-serif;
+    color: #9b0796;
+    letter-spacing: 0.5px;
+}

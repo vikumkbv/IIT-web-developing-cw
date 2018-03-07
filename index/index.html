@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GVCS Sports & Gaming</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    
+
+</head>
+
+<body>
+
+<!-- Navigation Bar Start -->
+
+<!-- Navigation Bar End -->
+<nav class="navBar">
+  <!--<form class="search-form">
+    <input type="text" placeholder="search">
+    <button>search</button>
+  </form>-->
+  <img class="logo" src="logo.png">
+  <ul>
+    <li><a class="active" href="index.html"><i class="fa fa-home">&nbsp;Home</i></a></li>
+    <li><a href="shop.html"><i class="fa fa-shopping-cart">&nbsp; Shop Now</i></a></li>
+    <li><a href="gallery.html"><i class="fa fa-picture-o">&nbsp; Gallery</i></a></li>
+    <li><a href="faq.html"><i class="fa fa-question-circle">&nbsp; Quiz</i></a></li>
+    <li><a href="contact.html"><i class="fa fa-envelope">&nbsp; Contact</i></a></li>
+    <li><a href="About.html"><i class="fa fa-users">&nbsp; About Us</i></a></li>
+    
+    
+    
+  </ul>
+</nav>
+<!-- Image slider Start -->
+<div class="slider">
+  <div class="imgSliderContainer">
+    <img class="mySlides imgsliderImages" src="img_rr_01.jpg" style="width:100%">
+    <img class="mySlides imgsliderImages" src="img_rr_02.jpg" style="width:100%">
+    <img class="mySlides imgsliderImages" src="img_rr_03.jpg" style="width:100%">
+    <img class="mySlides imgsliderImages" src="img_rr_04.jpg" style="width:100%">
+  </div>
+</div>
+
+<!-- Java script for Image slider -->
+<script>
+var no = 0;
+myslider();
+
+function myslider() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    no++;
+    if (no > x.length) {no = 1}    
+    x[no-1].style.display = "block";  
+    setTimeout(myslider, 6000); // Change image every 2 seconds
+}
+</script>
+<!-- Image slider end -->
+
+<!-- Content Start -->
+
+<br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<hr>
+<!-- Content End -->
+
+
+<!-- Footer section start -->
+  <div class="footer">
+    <p>Student 2 | <a href="#">Vikum Sanjeewa</a> &copy; Mokak hari company ekak</p>
+    <p id="date"></p>
+  
+    <script>
+       var d = new Date();
+       document.getElementById("date").innerHTML = d.toDateString();
+    </script>
+  </div>
+<!-- Footer section end -->
+</body>
+</html>

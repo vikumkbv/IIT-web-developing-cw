@@ -1,6 +1,6 @@
 <!-- external css of the portfolio -->
 
-.dropbtn {
+.dropButton {
     background-color:#d6d6c2;
     color: white;
     padding: 16px;
@@ -9,7 +9,7 @@
     cursor: pointer;
 }
 
-.dropbtn:hover, .dropbtn:focus {
+.dropButton:hover, .dropbtn:focus {
     background-color:#008080;
 }
 
@@ -18,9 +18,9 @@
 .dropdown {
     display: inline-block;
     padding: 10px;
-    float: right;
+    float: left;
     background-color:#d6d6c2;
-    margin: 10px;
+    margin: 5px;
     border-radius:5px;
 }
 
@@ -43,12 +43,14 @@
 .dropdown a:hover {background-color: #008080}
 
 .show {display:block;}
-.imgstyle{
+
+.imageStyle{
     height: 100px;
     width: 100px;
     border: 3px solid #bcd5d1;
 }
 header{
+
     padding: 10px;
     color:whitesmoke;
     text-align: center;
@@ -59,12 +61,15 @@ header{
     background-color:#008080; }
 
 .imgback{
+
     background-color: #009999;
+
     width: 600px;
     margin-left: 0px;
 }
 
 .paragraph{
+
     float: right;
     background-color:#d6d6c2;
     border-radius: 5px;
@@ -76,11 +81,17 @@ header{
 }
 
 footer{
-    padding: 0em;
-    color:#ccffff;
+
+    background-color:#008080;
+
     text-align:left;
     word-spacing: 7px;
     font-family:Verdana, Geneva, sans-serif;
-    height: 50px;
-    background-color:#008080;
+
+    position: absolute;
+    bottom: 0;
+    width: 1500px;
+    height: 30px;
+    margin: 0 auto;
+    padding: 10px;
 }

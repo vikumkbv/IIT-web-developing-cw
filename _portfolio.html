@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Portfolio</title>
+    <div>
+        <header>
+            <link rel="stylesheet" type="text/css" href="styles.css">
+            <h1>Just do it !</h1>
+        </header>
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Background Color</button>
+            <div id="myDropdown" class="dropdown-content">
+                <input type="color" id="color">
+                <input type="button" value="change" onclick="process()" >
+            </div>
+        </div>
+        <div class="dropdown">
+            <button onclick="fontchange()" class="dropbtn">Font Color</button>
+            <div id="fontdown" class="dropdown-content">
+                <input type="color" id="color1">
+                <input type="button" value="change" onclick="fontprocess()" >
+            </div>
+        </div>
+    </div>
+
+    <script >
+
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+
+        function process(){
+            var color=document.getElementById("color").value;
+            document.body.style.backgroundColor=color;
+        }
+
+        function fontchange() {
+            document.getElementById("fontdown").classList.toggle("show");
+        }
+
+        function fontprocess(){
+            var color=document.getElementById("color1").value;
+            document.getElementById("para").style.color=color;
+        }
+    </script>
+</head>
+<body style="width:100%; height:100%">
+<table>
+    <tr>
+        <td>
+            <img height="540px" width="auto" style="border:5px #008080" src="main.jpg" id="mainImage"/> <br>
+
+            <div id="myDiv" onclick="changeImage(event)">
+                <img class="imgstyle" src="main.jpg" onClick="test1()" >
+                <img class="imgstyle" src="volleyball.jpg" onClick="test2()"/>
+                <img class="imgstyle" src="athletic.jpg" onClick="test3()" />
+                <img class="imgstyle" src="swimming.jpg" onClick="test4()" />
+                <img class="imgstyle" src="tt.jpg" onClick="test5()" />
+                <img class="imgstyle" src="chess.jpg" onClick="test6()" />
+            </div> </td>
+
+        <td>
+            <div class="paragraph" ><p  id="para">"Sports" - Simply an adventure of physical, mental and emotional.
+                By playing sports you can get a fine balance, boost your body , have positive mentors ,
+                learn the value of team work and enjoy team work while having a healthy life.<br/><br/>There are
+                unlimited health benefits of playing sports including efficient functioning of the heart, proper
+                weight management, proper blood circulation, control of the cholesterol, glucose, hypertension levels
+                of blood and decreases the death rate of non-infectious diseases.As well as physically playing sports
+                involves in managing stress levels<br/><br/> As well as physical and mental  benefits playing sports
+                will build your personality like have a positive attitude, boosted self-esteem, discipline, mutual
+                respect and goal setting. There are both indoor and outdoor games as well as team and individual sports.</p>
+            </div>
+        </td>
+    </tr>
+</table>
+<script>
+
+
+    function test1(){
+        document.getElementById("para").innerHTML = " Foot ball is a team game with a maximum of 11 players in" +
+            " a team including the team leader and one must be a goal keeper. But a match would n't start if either " +
+            "team doesn't have 7 players. It's an interesting game which has manny die-hard fans are there in all " +
+            "around the world.<br/> <br/>This is the image of the amazing bicycle kick by Ronaldinho Ibrahimovic against " +
+            "England in 2012. ";}
+
+
+    <!--Calling the function to display the description when click on the image 2 -->
+    function test2(){
+        document.getElementById("para").innerHTML = "As well as individual development team games are there to teach " +
+            "the importance of a team. There are many great benefits which participants can gain like it develops " +
+            "relationships, helps put winning into perspective, learn respect and how to achieve success as a team by " +
+            "identifying and helping in the weaknesses of the team members as well as using the strengths of " +
+            "team members in a useful way. For students it contributes to stronger academics.<br/><br/>This is a " +
+            "picture of a volleyball match which is an eye catching team game.";}
+
+    <!--Calling the function to display the description when click on the image 3 -->
+    function test3(){
+        document.getElementById("para").innerHTML = "An athlete cannot run with money in his pockets. He must run" +
+            " with hope in his heart and dreams in his head <br/>&nbsp; ~Emil Zatopek~";}
+
+    <!--Calling the function to display the description when click on the image 4 -->
+    function test4(){
+        document.getElementById("para").innerHTML = "Persistence can change failure into extra-ordinary achievement." +
+            "<br/> ~Matt Biondi~-Three-times US Olympic swimmer.<br/><br/>";}
+
+    <!--Calling the function to display the description when click on the image 5 -->
+    function test5(){
+        document.getElementById("para").innerHTML = "indoor";}
+
+
+    function test6(){
+        document.getElementById("para").innerHTML = "<pre>~Game of brains without sweat.~</pre><br/> <br/>" +
+            "Chess is  an indoor game originated in China. But it was spread to Persia through India.<br/> <br/>" +
+            "Chess is a game which activates the both sides of the brain.It helps to develop creativity by " +
+            "activating the right side of the brain.At the same time it playing chess grows dendrites, which conduct " +
+            "brain signals, and the prefrontal cortex, which co-ordinates planning, judgement and control <br/> " +
+            "So do you want to play without sweat? <br/><br/> Chess is the best game to enjoy playing, " +
+            "improve yourself while enjoy playing without sweat.";}
+</script>
+<script type="text/javascript" language="javascript">
+    var images = document.getElementById("myDiv").getElementsByTagName("img");
+
+    for(var i=0;i<images.length;i++){
+        images[i].onmouseover=function(){
+            this.style.cursor='hand';
+            this.style.borderColor='#009999';
+        }
+
+        images[i].onmouseout=function(){
+            this.style.cursor='pointer';
+            this.style.borderColor='#ccffff';
+        }
+    }
+
+    function changeImage(event){
+        event=event || window.event;
+        var targetElement= event.target|| event.srcElement;
+        //if(targetElement.TagName=="img"){
+        document.getElementById("mainImage").src=targetElement.getAttribute("src");
+        // }
+    }
+</script>
+</body>
+
+<Address>
+    <a href="Sanduni_cv.html">Sanduni Chamika</a>
+</Address>
+
+</html>

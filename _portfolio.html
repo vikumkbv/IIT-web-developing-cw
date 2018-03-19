@@ -1,32 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <title>Portfolio</title>
+
     <div>
+
         <header>
             <link rel="stylesheet" type="text/css" href="styles.css">
             <h1>Just do it !</h1>
         </header>
+
+        <!--function displaying background color changing drop down menu and changing the background color-->
         <div class="dropdown">
-            <button onclick="myFunction()" class="dropbtn">Background Color</button>
-            <div id="myDropdown" class="dropdown-content">
+            <button onclick="backgroundChange()" class="dropButton">Background Color</button>
+            <div id="dropDownBackground" class="dropdown-content">
                 <input type="color" id="color">
                 <input type="button" value="change" onclick="process()" >
             </div>
         </div>
+
+        <!--function displaying font color changing drop down menu and changing the font color-->
         <div class="dropdown">
-            <button onclick="fontchange()" class="dropbtn">Font Color</button>
-            <div id="fontdown" class="dropdown-content">
+            <button onclick="fontChange()" class="dropButton">Font Color</button>
+            <div id="dropDownFont" class="dropdown-content">
                 <input type="color" id="color1">
                 <input type="button" value="change" onclick="fontprocess()" >
             </div>
         </div>
+
     </div>
 
+    <!--script for the drop down menus- background color and the font colors-->
     <script >
 
-        function myFunction() {
-            document.getElementById("myDropdown").classList.toggle("show");
+        function backgroundChange() {
+            document.getElementById("dropDownBackground").classList.toggle("show");
         }
 
 
@@ -35,8 +44,8 @@
             document.body.style.backgroundColor=color;
         }
 
-        function fontchange() {
-            document.getElementById("fontdown").classList.toggle("show");
+        function fontChange() {
+            document.getElementById("dropDownFont").classList.toggle("show");
         }
 
         function fontprocess(){
@@ -44,23 +53,36 @@
             document.getElementById("para").style.color=color;
         }
     </script>
+
 </head>
+
 <body style="width:100%; height:100%">
+
 <table>
+
     <tr>
         <td>
             <img height="540px" width="auto" style="border:5px #008080" src="main.jpg" id="mainImage"/> <br>
 
             <div id="myDiv" onclick="changeImage(event)">
-                <img class="imgstyle" src="main.jpg" onClick="test1()" >
-                <img class="imgstyle" src="volleyball.jpg" onClick="test2()"/>
-                <img class="imgstyle" src="athletic.jpg" onClick="test3()" />
-                <img class="imgstyle" src="swimming.jpg" onClick="test4()" />
-                <img class="imgstyle" src="tt.jpg" onClick="test5()" />
-                <img class="imgstyle" src="chess.jpg" onClick="test6()" />
-            </div> </td>
+                <!--Calling the test1() function when click on the main image-->
+                <img class="imageStyle" src="main.jpg" onClick="test1()" >
+                <!--Calling the test2() function when click on the second thumbnail image- volleyball-->
+                <img class="imageStyle" src="volleyball.jpg" onClick="test2()"/>
+                <!--Calling the test3() function when click on the third thumbnail image- athletic-->
+                <img class="imageStyle" src="athletic.jpg" onClick="test3()" />
+                <!--Calling the test4() function when click on the forth thumbnail image- swimming-->
+                <img class="imageStyle" src="swimming.jpg" onClick="test4()" />
+                <!--Calling the test5() function when click on the fifth thumbnail image- table tennis-->
+                <img class="imageStyle" src="tt.jpg" onClick="test5()" />
+                <!--Calling the test6() function when click on the sixth thumbnail image- chess-->
+                <img class="imageStyle" src="chess.jpg" onClick="test6()" />
+            </div>
+
+        </td>
 
         <td>
+            <!--Initial description-->
             <div class="paragraph" ><p  id="para">"Sports" - Simply an adventure of physical, mental and emotional.
                 By playing sports you can get a fine balance, boost your body , have positive mentors ,
                 learn the value of team work and enjoy team work while having a healthy life.<br/><br/>There are
@@ -74,6 +96,8 @@
         </td>
     </tr>
 </table>
+
+<!--script for displaying the description-->
 <script>
 
 
@@ -97,16 +121,19 @@
     <!--Calling the function to display the description when click on the image 3 -->
     function test3(){
         document.getElementById("para").innerHTML = "An athlete cannot run with money in his pockets. He must run" +
-            " with hope in his heart and dreams in his head <br/>&nbsp; ~Emil Zatopek~";}
+            " with hope in his heart and dreams in his head <br/>&nbsp; &nbsp; &nbsp; ~Emil Zatopek~";}
 
     <!--Calling the function to display the description when click on the image 4 -->
     function test4(){
         document.getElementById("para").innerHTML = "Persistence can change failure into extra-ordinary achievement." +
-            "<br/> ~Matt Biondi~-Three-times US Olympic swimmer.<br/><br/>";}
+            "<br/> &nbsp; &nbsp;~Matt Biondi~<br/> &nbsp; &nbsp; Three-times US Olympic swimmer.<br/><br/>";}
 
     <!--Calling the function to display the description when click on the image 5 -->
     function test5(){
-        document.getElementById("para").innerHTML = "indoor";}
+        document.getElementById("para").innerHTML = "Table tennis or ping pong is a game which can play by 2 players " +
+            "as individuals or 4 players can play as a team. Play by hitting a light weight tennis ball.Table tennis is" +
+            " a game which should play with the rhythm of the body movements and the rythm of the movement of the ball." +
+            "<br/><br/>";}
 
 
     function test6(){
@@ -118,24 +145,31 @@
             "So do you want to play without sweat? <br/><br/> Chess is the best game to enjoy playing, " +
             "improve yourself while enjoy playing without sweat.";}
 </script>
-<script type="text/javascript" language="javascript">
-    var images = document.getElementById("myDiv").getElementsByTagName("img");
 
-    for(var i=0;i<images.length;i++){
-        images[i].onmouseover=function(){
+
+<!--Script for changing the border of the thumbnail images according to the mouse event-->
+<script type="text/javascript" language="javascript">
+    var image = document.getElementById("myDiv").getElementsByTagName("img");
+
+    for(var i=0;i<image.length;i++){
+
+        <!--function for changing the border of thumbnail image for mouse over the thumbnail images-->
+        image[i].onmouseover=function(){
             this.style.cursor='hand';
             this.style.borderColor='#009999';
         }
 
-        images[i].onmouseout=function(){
+        <!--function for changing the border of thumbnail image for the mouse out of the thumbnail images-->
+        image[i].onmouseout=function(){
             this.style.cursor='pointer';
             this.style.borderColor='#ccffff';
         }
     }
 
+    <!--function for chaning the images-->
     function changeImage(event){
-        event=event || window.event;
-        var targetElement= event.target|| event.srcElement;
+        event = event || window.event;
+        var targetElement = event.target|| event.srcElement;
         //if(targetElement.TagName=="img"){
         document.getElementById("mainImage").src=targetElement.getAttribute("src");
         // }

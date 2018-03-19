@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Spectrum Sports</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Arima+Madurai" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- Navigation Bar Start -->
+<div class="navBarcontainer">
+  
+  <nav class="navBar">
+  
+  <ul>
+    <li><a class="active" href="index.html"><i class="fa fa-home">&nbsp;Home</i></a></li>
+    <li><a href="file:///C:/Users/AcerTM/Desktop/webcw/Student%201/index.html"><i class="fa fa-shopping-cart">&nbsp; Shop Now</i></a></li>
+    <li><a href="gallery.html"><i class="fa fa-picture-o">&nbsp; Gallery</i></a></li>
+    <li><a href="faq.html"><i class="fa fa-question-circle">&nbsp; Quiz</i></a></li>
+    <li><a href="contact.html"><i class="fa fa-envelope">&nbsp; Contact</i></a></li>
+    <li><a href="About.html"><i class="fa fa-users">&nbsp; About Us</i></a></li>
+    <li><a href="#" onclick="javascript:fontSize();" style="width: 50px;"><i class="fa fa-search-plus"></i></a></li>
+
+  </ul>
+</nav>
+</div>
+<script type="text/javascript">
+  var click=0;
+ function fontSize(){
+   var click=1;
+  if (click==1) {
+    document.getElementById("fontSizer").style.display="block";
+    var click = 0;
+  }else{
+    document.getElementById("fontSizer").style.display="none";
+    var click = 1;
+  }
+}
+</script>
+<!-- Navigation Bar End -->
+<img class="logo" src="logo.png">
+
+
+<!-- Image slider Start -->
+<div class="slider">
+  <div class="imgSliderContainer">
+    <img class="mySlides imgsliderImages" src="slider1.jpg" style="width:100%">
+    <img class="mySlides imgsliderImages" src="slider2.jpg" style="width:100%">
+  </div>
+</div>
+<div id="fontSizer">
+  <input type="range" min="12" max="30" value="14" class="fontSizeChanger" id="fontSize">
+</div>
+<!-- Java script for Image slider -->
+<script>
+var no = 0;
+myslider();
+
+function myslider() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    no++;
+    if (no > x.length) {no = 1}    
+    x[no-1].style.display = "block";  
+    setTimeout(myslider, 6000); // Change image every 2 seconds
+}
+</script>
+<!-- Image slider end -->
+
+
+<!-- card set start -->
+<div class="cardset">
+
+   <iframe src="Student1\index.html#popularSection" scrolling="no" frameBorder="0" style="border:2px solid grey; width: 100%; height: 520px; padding-bottom: 10px; "></iframe> 
+
+</div>
+
+<!-- card set end -->
+
+<!-- gradiant info set start -->
+<section class="section gradiant-add  bg-acapulco">
+          <div>
+            <h2><span class="big">Best-Selling & Most Trusted</span><span class="big" style="color: #ff00cb;"> Web Store</span></h2>
+            <p style="color: #434345;">Experience the Best Quality</p>
+          </div>
+</section>
+<!-- gradiant info set end -->
+
+
+
+<!-- client section start -->
+<section class="partners">
+        
+              <h2>Partners</h2>
+            </br>
+              
+          
+          <div class="sponsors">
+            
+              <!-- Box icon-->
+              <article class="box-icon">
+                <figure class="box-icon-image"><a href="#"><img src="partner1.png" alt="" width="126" height="102"/></a></figure>
+              </article>
+          
+
+            
+              <!-- Box icon-->
+              <article class="box-icon">
+                <figure class="box-icon-image"><a href="#"><img src="partner2.png" alt="" width="134" height="102"/></a></figure>
+              </article>
+            
+
+            
+              <!-- Box icon-->
+              <article class="box-icon">
+                <figure style="padding-top: 8px;" class="box-icon-image"><a href="#"><img src="partner3.png" alt="" width="132" height="102"/></a></figure>
+              </article>
+                       
+            
+              <!-- Box icon-->
+              <article class="box-icon">
+                <figure style="padding-top: 8px;" class="box-icon-image"><a href="#"><img src="partner4.png" alt="" width="126" height="102"/></a></figure>
+              </article>
+          
+          </div>
+        
+      </section>
+<!-- client section end-->
+
+<!-- comment section start -->
+<section class="section comment">
+          <div><img src="review.png" alt>
+            <div>
+              <h2><span class="big">Customer Reviews</span></h2>
+            </div>
+            <hr style="width: 30px; background-color: #41f455; height:  3px;">
+          </div>
+<div class="formholder">
+<form class="commentbox">
+<fieldset>
+  <label for="name">Name    : </label>
+  <input id="name" type="text" name="name" placeholder="name">
+</fieldset>
+<fieldset>  
+  <label for="email">E-mail  : </label> 
+  <input id="email" type="text" name="email" placeholder="email"><br>
+</fieldset>
+<fieldset>  
+  <label for="feedback">Feedback : </label>
+  <textarea id="msg" placeholder="Your comment here...." tabindex="5" ></textarea><br>
+</fieldset>
+<fieldset>
+  <label for="rate">Rate Us : </label>
+
+  <div id="rate" class="stars">
+  
+    <input class="star star-5" id="star-5" type="radio" name="star" value="5 Star"/>
+    <label class="star star-5" for="star-5"></label>
+    <input class="star star-4" id="star-4" type="radio" name="star" value="4 Star"/>
+    <label class="star star-4" for="star-4"></label>
+    <input class="star star-3" id="star-3" type="radio" name="star" value="3 Star"/>
+    <label class="star star-3" for="star-3"></label>
+    <input class="star star-2" id="star-2" type="radio" name="star" value="2 Star"/>
+    <label class="star star-2" for="star-2"></label>
+    <input class="star star-1" id="star-1" type="radio" name="star" value="1 Star"/>
+    <label class="star star-1" for="star-1"></label>
+  
+  </div>
+
+    <button onClick="return submitbtn()" name="submit" type="button" id="contact-submit" >Submit</button>
+    </fieldset>
+</form>
+</div>
+
+
+</section>
+
+<!-- comment section end -->
+
+
+<!-- Content Start -->
+
+
+<!-- Content End -->
+
+
+
+<!-- Footer section start -->
+  <div class="footer">
+    <p>Student 2 | <a href="#">Vikum Sanjeewa</a> &copy; Spectrum Sports <br><i id="date"></i></p>
+    
+    <ul class="d-list">
+          <i class="fa fa-cc-visa"></i>
+          <i class="fa fa-cc-mastercard"></i>
+          <i class="fa fa-cc-discover"></i>
+          <i class="fa fa-cc-amex"></i>
+          <i class="fa fa-cc-paypal"></i>
+        </ul>
+  
+    <script>
+       var d = new Date();
+       document.getElementById("date").innerHTML = d.toDateString();
+    </script>
+  </div>
+
+<!-- Footer section end -->
+</body>
+<script type="text/javascript">
+  var span = document.body;
+var pSize = document.getElementsByTagName('p');
+var divSize = document.getElementsByTagName('div');
+
+document.getElementById("fontSize").oninput = function(){
+  span.style.fontSize = this.value+"px";
+  
+  
+  Array.from(pSize).forEach(p=>{
+  p.style.fontSize = this.value+"px";
+});
+  Array.from(divSize).forEach(p=>{
+  p.style.fontSize = this.value+"px";
+});
+  
+
+}
+</script>
+</html>

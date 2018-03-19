@@ -1,0 +1,86 @@
+<!-- external css of the portfolio -->
+
+.dropbtn {
+    background-color:#d6d6c2;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color:#008080;
+}
+
+
+
+.dropdown {
+    display: inline-block;
+    padding: 10px;
+    float: right;
+    background-color:#d6d6c2;
+    margin: 10px;
+    border-radius:5px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #d6d6c2;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;}
+
+.dropdown a:hover {background-color: #008080}
+
+.show {display:block;}
+.imgstyle{
+    height: 100px;
+    width: 100px;
+    border: 3px solid #bcd5d1;
+}
+header{
+    padding: 10px;
+    color:whitesmoke;
+    text-align: center;
+    word-spacing: 7px;
+    font-family:"Rockwell Extra Bold", Algerian;
+    font-size: x-large;
+    height: 100px;
+    background-color:#008080; }
+
+.imgback{
+    background-color: #009999;
+    width: 600px;
+    margin-left: 0px;
+}
+
+.paragraph{
+    float: right;
+    background-color:#d6d6c2;
+    border-radius: 5px;
+    padding: 20px;
+    width: 300px;
+    font-size: 105%;
+    font-family: "Arial", sans-serif;
+    text-align: justify;
+}
+
+footer{
+    padding: 0em;
+    color:#ccffff;
+    text-align:left;
+    word-spacing: 7px;
+    font-family:Verdana, Geneva, sans-serif;
+    height: 50px;
+    background-color:#008080;
+}
